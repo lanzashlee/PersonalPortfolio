@@ -1,0 +1,122 @@
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JWindow;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
+public class page_1 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					page_1 frame = new page_1();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public page_1() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 800, 450);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\HP\\Downloads\\Portfolio (800 × 450 px) (5).png"));
+		lblNewLabel.setBounds(0, 0, 800, 450);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Biography");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Biography Biography = new Biography();
+				Biography.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton.setBounds(45, 198, 148, 49);
+		btnNewButton.setOpaque(false);
+		btnNewButton.setContentAreaFilled(false);
+		btnNewButton.setBorderPainted(false);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Hobbies");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Hobby Hobby = new Hobby();
+				Hobby.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_1.setBounds(237, 282, 134, 49);
+		btnNewButton_1.setOpaque(false);
+		btnNewButton_1.setContentAreaFilled(false);
+		btnNewButton_1.setBorderPainted(false);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Achievements");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Achievements Achievements= new Achievements();
+				Achievements.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_2.setBounds(416, 207, 167, 52);
+		btnNewButton_2.setOpaque(false);
+		btnNewButton_2.setContentAreaFilled(false);
+		btnNewButton_2.setBorderPainted(false);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Education");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Education Education = new Education();
+				Education.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_3.setBounds(582, 282, 141, 49);
+		btnNewButton_3.setOpaque(false);
+		btnNewButton_3.setContentAreaFilled(false);
+		btnNewButton_3.setBorderPainted(false);
+		contentPane.add(btnNewButton_3);
+		
+		JButton btnNewButton_4 = new JButton("Back");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				portfolio portfolio = new portfolio();
+				portfolio.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_4.setBounds(687, 11, 89, 40);
+		btnNewButton_4.setOpaque(false);
+		btnNewButton_4.setContentAreaFilled(false);
+		btnNewButton_4.setBorderPainted(false);
+		contentPane.add(btnNewButton_4);
+	}
+
+
+}
